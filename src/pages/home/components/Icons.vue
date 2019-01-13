@@ -95,33 +95,35 @@ export default {
 .icons >>> .swiper-container
   height: 0;
   padding-bottom: 3rem;
-.icon
-  position: relative;
-  overflow: hidden;
-  float: left;
-  width: 25%;
-  padding-bottom: 1.5rem
-  .icon-img-wrap
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0.3rem;
-    box-sizing: border-box;
-    padding: 0.1rem;
-    .icon-img
-      display: block;
-      margin: 0 auto;
-      width: 1.1rem;
-      height: 1.1rem;
-  .icon-desc
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 0.3rem;
-    line-height: 0.3rem;
-    text-align: center;
-    color: $darkTextColor;
-    ellipsis()
+.icons
+  margin-top: .1rem
+  .icon
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 25%;
+    padding-bottom: 1.5rem
+    .icon-img-wrap
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0.3rem;
+      box-sizing: border-box;
+      padding: 0.1rem;
+      .icon-img
+        display: block;
+        margin: 0 auto;
+        width: 1.1rem;
+        height: 1.1rem;
+    .icon-desc
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      text-align: center;
+      color: $darkTextColor;
+      ellipsis()
 </style>
