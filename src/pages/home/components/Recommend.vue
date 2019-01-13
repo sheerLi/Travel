@@ -41,6 +41,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
+  @import '~styles/varibles.styl'
   .recommend-title
     margin-top: .2rem
     line-height: .8rem
@@ -60,10 +61,11 @@ export default {
       .item-title
         line-height: .54rem
         font-size: .32rem
+        color: $largeDarkTextColor
         ellipsis()
       .item-desc
         line-height: .4rem
-        color: #ccc
+        color: $lightTextColor
         ellipsis()
       .item-button
         line-height: .44rem
