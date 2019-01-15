@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">猜你喜爱</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <img :src="item.imgUrl" alt="" class="item-img">
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -15,27 +15,8 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/7f/7f1ef549dd244659.water.jpg_200x200_48a59e1f.jpg',
-        title: '狼山',
-        desc: '坐落于南通'
-      },
-      {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/7f/7f1ef549dd244659.water.jpg_200x200_48a59e1f.jpg',
-        title: '狼山',
-        desc: '坐落于南通'
-      },
-      {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/7f/7f1ef549dd244659.water.jpg_200x200_48a59e1f.jpg',
-        title: '狼山',
-        desc: '坐落于南通'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
