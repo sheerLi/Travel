@@ -11,14 +11,15 @@ import 'styles/border.css'
 
 import 'styles/iconfont.css'
 // 解决移动端点击 300ms 延迟问题
-import fastclick from 'fastclick'
+import fastClick from 'fastclick'
 
 // 导入轮播图插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
 
-fastclick.attach(document.body)
+fastClick.attach(document.body)
+// window.addEventListener('touchstart', function () {}, {passive: true})
 
 Vue.config.productionTip = false
 
