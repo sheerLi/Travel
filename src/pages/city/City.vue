@@ -1,9 +1,9 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
-    <city-list :cities="cities" :hot="hotCities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-search :cities="cities"></city-search>
+    <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
+    <city-alphabet :cities="cities" @change="showLetterArea"></city-alphabet>
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
   data () {
     return {
       cities: null,
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   methods: {
@@ -41,6 +42,10 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
+    },
+    showLetterArea (letter) {
+      // console.log(letter)
+      this.letter = letter
     }
   }
 }
