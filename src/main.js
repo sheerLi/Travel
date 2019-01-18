@@ -16,10 +16,10 @@ import fastClick from 'fastclick'
 // 导入轮播图插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper)
 
+import store from './store/index'
 fastClick.attach(document.body)
-// window.addEventListener('touchstart', function () {}, {passive: true})
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 
@@ -27,6 +27,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
