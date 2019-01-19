@@ -51,6 +51,7 @@ export default {
       right: 0
       bottom: 0
       color: #fff
+      background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8))
       .banner-title
         flex: 1
         padding: 0 .2rem
