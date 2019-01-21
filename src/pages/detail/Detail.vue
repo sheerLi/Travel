@@ -1,68 +1,55 @@
 <template>
   <div>
-    <div class="banner" @click="handleClick">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1506/7f/7f1ef549dd244659.water.jpg_600x330_3f85a30e.jpg" alt="">
-      <div class="banner-info">
-        <div class="banner-title">狼山(AAAA景区)</div>
-        <div class="banner-number"><span class="iconfont">&#xe7bc;</span>39</div>
-      </div>
+    <detail-banner :sightName="sightName" :bannerImg="bannerImg" :gallaryImgs="gallaryImgs"></detail-banner>
+    <detail-header></detail-header>
+    <div class="content">
+      <detail-list :categoryList="categoryList"></detail-list>
     </div>
-    <Gallery :imgs="imgs" v-show="showGallery" @close="closeGallery"></Gallery>
   </div>
 </template>
 
 <script>
-import Gallery from 'common/gallery/Gallery'
+import DetailBanner from './components/Banner'
+import DetailHeader from './components/Header'
+import DetailList from './components/List'
+import axios from 'axios'
 export default {
   name: 'Detail',
   data () {
     return {
-      showGallery: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_r_800x800_6edd8174.jpg', 'http://img1.qunarzz.com/sight/p55/201211/04/fbcab3e5d6479ce893835fbb.jpg_r_800x800_6360f514.jpg']
-    }
-  },
-  methods: {
-    handleClick () {
-      this.showGallery = true
-    },
-    closeGallery () {
-      this.showGallery = false
+      sightName: '',
+      bannerImg: '',
+      gallaryImgs: [],
+      categoryList: []
     }
   },
   components: {
-    Gallery
+    DetailBanner,
+    DetailHeader,
+    DetailList
+  },
+  methods: {
+    getDetailInfo () {
+      axios.get('/api/detail.json').then(this.getDetailInfoSucc)
+    },
+    getDetailInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.sightName = data.sightName
+        this.bannerImg = data.bannerImg
+        this.gallaryImgs = data.gallaryImgs
+        this.categoryList = data.categoryList
+      }
+    }
+  },
+  mounted () {
+    this.getDetailInfo()
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .banner
-    position: relative
-    height: 0
-    overflow: hidden
-    padding-bottom: 55%
-    .banner-img
-      width: 100%
-    .banner-info
-      display: flex
-      line-height: .6rem
-      position: absolute
-      left: 0
-      right: 0
-      bottom: 0
-      color: #fff
-      .banner-title
-        flex: 1
-        padding: 0 .2rem
-        font-size: .32rem
-      .banner-number
-        font-size: .24rem
-        height: .32rem
-        line-height: .32rem
-        margin-top: .14rem
-        padding: 0 .4rem
-        border-radius: .2rem
-        background: rgba(0,0,0,.8)
-        .iconfont
-          font-size: .24rem
+  .content
+    height: 50rem
 </style>
