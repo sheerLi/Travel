@@ -32,7 +32,9 @@ import BScroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
 export default {
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper, {
+      click: true
+    })
   },
   computed: {
     ...mapState({

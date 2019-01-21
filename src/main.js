@@ -17,6 +17,8 @@ import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
+import 'babel-polyfill'
+
 import store from './store/index'
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
