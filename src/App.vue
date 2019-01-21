@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 请求一次数据后，缓存在内存中， 提升性能 -->
-    <keep-alive>
+    <keep-alive exclude="Detail">
       <router-view></router-view>
     </keep-alive>
   </div>
