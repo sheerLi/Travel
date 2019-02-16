@@ -10,10 +10,10 @@
 
 ## 效果截图
 
-![image](http://github.com/sheerLi/Travel/raw/master/src/images/index.png)
-![image](http://github.com/sheerLi/Travel/raw/master/src/images/index2.png)
-![image](http://github.com/sheerLi/Travel/raw/master/src/images/index3.png)
+![image](https://github.com/sheerLi/Travel/blob/master/src/images/index.png)
+![image](https://github.com/sheerLi/Travel/blob/master/src/images/index2.png)
+![image](https://github.com/sheerLi/Travel/blob/master/src/images/index3.png)
 
-![image](http://github.com/sheerLi/Travel/raw/master/src/images/city.png)
-![image](http://github.com/sheerLi/Travel/raw/master/src/images/detail.png)
-![image](http://github.com/sheerLi/Travel/raw/master/src/images/gallery.png)
+![image](https://github.com/sheerLi/Travel/blob/master/src/images/city.png)
+![image](https://github.com/sheerLi/Travel/blob/master/src/images/detail.png)
+![image](https://github.com/sheerLi/Travel/blob/master/src/images/gallery.png)
