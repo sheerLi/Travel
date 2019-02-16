@@ -1,21 +1,19 @@
-# travel
+# 仿去哪儿网
 
-> 去哪儿网
+> Vue相关技术：vue-router前端路由的使用、父子组件、兄弟组件的传值问题、axios发送ajax请求、better-scroll第三方插件的使用、vuex状态管理、基本动画的使用、动态路由的概念  
 
-## Build Setup
+> 脚手架工具：vue-cli  
 
-``` bash
-# install dependencies
-npm install
+> 前端构建工具：webpack
 
-# serve with hot reload at localhost:8080
-npm run dev
+> 图标库：阿里图标库、iconfont技术
 
-# build for production with minification
-npm run build
+## 效果截图
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+![image](http://github.com/sheerLi/Travel/raw/master/src/images/index.png)
+![image](http://github.com/sheerLi/Travel/raw/master/src/images/index2.png)
+![image](http://github.com/sheerLi/Travel/raw/master/src/images/index3.png)
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![image](http://github.com/sheerLi/Travel/raw/master/src/images/city.png)
+![image](http://github.com/sheerLi/Travel/raw/master/src/images/detail.png)
+![image](http://github.com/sheerLi/Travel/raw/master/src/images/gallery.png)
